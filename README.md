@@ -3,7 +3,7 @@
 ## Subtask 1 of 3 – Basic Information
 
 - **The Name of the Dataset**  
-  My chosen dialogue dataset’s name is the Empathetic Dialogues dataset. 
+  My chosen dialogue dataset’s name is the *Empathetic Dialogues* dataset. 
 
 - **What Kind of Data It Is (Domain, Modality)**  
   It is a dataset of 25,000 (25 thousand) one-to-one conversations prompted by given emotion labels. Since these conversations are written, the dataset’s modality is textual. The dataset’s domain is empathetic conversations occurring during emotional, personal situations.
@@ -24,7 +24,7 @@
   The downloaded folder ‘empatheticdialogues’ contains three files each file containing a training, a validation, and a test dataset; these files are stored in csv format (i.e., train.csv, valid.csv, test.csv).
 
 - **What the License Is**  
-  The Empathetic Dialogues dataset is licensed under the "Creative Commons Attribution-NonCommercial 4.0 International Public License" license (CC BY-NC 4.0), which is part of the Creative Commons framework. Under this license, users are free to “copy and redistribute the material in any medium or format” as well as to “remix, transform, and build upon the material” while giving appropriate credit, providing a link to the license, and indicating if changes were made; also, users “may not use the material for commercial purposes” (taken from [Creative Commons License](https://creativecommons.org/licenses/by-nc/4.0/deed.en)).
+  The *Empathetic Dialogues* dataset is licensed under the "Creative Commons Attribution-NonCommercial 4.0 International Public License" license (CC BY-NC 4.0), which is part of the Creative Commons framework. Under this license, users are free to “copy and redistribute the material in any medium or format” as well as to “remix, transform, and build upon the material” while giving appropriate credit, providing a link to the license, and indicating if changes were made; also, users “may not use the material for commercial purposes” (taken from [Creative Commons License](https://creativecommons.org/licenses/by-nc/4.0/deed.en)).
 
 ## Subtask 2 of 3 - Measurements
 
@@ -81,10 +81,12 @@
 - **How Usable Will it Be In an Actual System?**
   The present Empathetic Dialogues dataset does contain relevant conversations by human interlocutors, but due to certain significant issues described in detail below, I do not believe it is immediately usable to train an actual dialogue system.
 
-- **Do You Think There's Some Kind Of Problem Or Limitation With The Data?**
-  I have discovered that there are some serious problems concerning the quality of the training dataset. Indeed, there exist problems concerning the structure of the ‘utterance’ columns that severely influence the statistics of the sentence and word counts, as well as any potential model training. As seen in the Mean/Std Lengths table, the problem lies with the occasional wrong conversation boundaries, where various conversation IDs are falsely incorporated into one and only ‘utterance’ column of another conversation ID, with the result that whole rows of a conversation ID (together with their columns and their respective text/values) are found under one ‘utterance’ column. 
-Furthermore, I believe there may be some bias with respect to some emotions, since a certain emotion is over-represented (“surprised”), and others are under-represented (“trusting”, “ashamed”, “apprehensive”, and “faithful”). The view that this constitutes bias in the training dataset is, of course, based on the assumption that the unequal representation of emotions does not truthfully represent how emotion is actually distributed across the population. Should the opposite be true, i.e. the emotions depicted are an actual representation of the population, the unequal representation is something that needs to be left as is.
-In conclusion, to be able to make use of the present dataset for dialogue system training, a thorough review and manual separation of the mixed conversation IDs are required. Also, depending on the assumptions made, one must decide whether to keep the unequal emotion-representation or not.
+- **Do You Think There's Some Kind of Problem or Limitation With The Data?**
+  I have discovered that there are some serious problems concerning the quality of the training dataset. Indeed, there exist problems concerning the structure of the ‘utterance’ columns that severely influence the statistics of the sentence and word counts, as well as any potential model training. As seen in the Mean/Std Lengths table, the problem lies with the occasional wrong conversation boundaries, where various conversation IDs are falsely incorporated into one and only ‘utterance’ column of another conversation ID, with the result that whole rows of a conversation ID (together with their columns and their respective text/values) are found under one ‘utterance’ column.
+  
+  Furthermore, I believe there may be some bias with respect to some emotions, since a certain emotion is over-represented (“surprised”), and others are under-represented (“trusting”, “ashamed”, “apprehensive”, and “faithful”). The view that this constitutes bias in the training dataset is, of course, based on the assumption that the unequal representation of emotions *does not truthfully represent* how emotion is actually distributed across the population. Should the opposite be true, i.e. the emotions depicted are an actual representation of the population, the unequal representation is something that needs to be left as is.
+
+  In conclusion, to be able to make use of the present dataset for dialogue system training, a thorough review and manual separation of the mixed conversation IDs are required. Also, depending on the assumptions made, one must decide whether to keep the unequal emotion-representation or not.
 
 ## Bibliography
 Rashkin, Hannah, et al. *Towards Empathetic Open-Domain Conversation Models: A New Benchmark and Dataset.* arXiv, Cornell University, 28 Aug. 2019, [arxiv.org/abs/1811.00207](arxiv.org/abs/1811.00207). [Accessed on 2 Dec 2023]
